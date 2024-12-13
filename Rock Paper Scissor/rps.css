@@ -49,3 +49,63 @@ h1{
 .scoreDisplay{
     font-size: 1.5rem;
 }
+
+/*For mobile */
+
+/* General mobile-friendly styling */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Reduce title size for smaller screens */
+        text-align: center;
+    }
+
+    .choices button {
+        font-size: 5rem; /* Decrease button size */
+        min-width: 100px; /* Adjust button width */
+        margin: 5px; /* Reduce spacing between buttons */
+    }
+
+    #playerDisplay,
+    #computerDisplay {
+        font-size: 2rem; /* Adjust display text size */
+    }
+
+    #resultDisplay {
+        font-size: 3rem; /* Reduce result size */
+    }
+
+    .scoreDisplay {
+        font-size: 1.2rem; /* Smaller score text */
+        text-align: center;
+    }
+}
+
+/* Additional tweaks for very small screens (e.g., phones) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .choices button {
+        font-size: 4rem;
+        min-width: 80px;
+    }
+
+    #playerDisplay,
+    #computerDisplay {
+        font-size: 1.5rem;
+    }
+
+    #resultDisplay {
+        font-size: 2.5rem;
+    }
+
+    .scoreDisplay {
+        font-size: 1rem;
+    }
+}
+
