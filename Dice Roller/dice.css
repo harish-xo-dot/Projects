@@ -39,3 +39,37 @@ input{
     width: 150px;
     margin: 5px;
 }
+
+
+/* For mobile */
+
+@media (max-width: 370px) {
+    /* Adjust the font size of the container */
+    #container {
+        font-size: 1.5rem; /* Smaller font size for small screens */
+        padding: 10px; /* Add some padding to avoid elements sticking to the edges */
+    }
+
+    /* Adjust button size */
+    button {
+        font-size: 1.2rem; /* Smaller font size */
+        padding: 8px 12px; /* Smaller padding */
+    }
+
+    /* Adjust input field size */
+    input {
+        font-size: 1.5rem; /* Smaller font size */
+        width: 120px; /* Smaller width for input */
+    }
+
+    /* Adjust the dice result text */
+    #diceResult {
+        font-size: 1.3rem; /* Slightly smaller text for dice results */
+    }
+
+    /* Adjust dice images to fit better */
+    #diceImages img {
+        width: 100px; /* Smaller dice image size */
+        margin: 5px; /* Adjust margin between images */
+    }
+}
