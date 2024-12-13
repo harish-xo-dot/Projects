@@ -91,3 +91,39 @@ p{
 .weatherGif{
     height: 150px;
 }
+
+
+/* For mobile */
+
+
+/* Responsive Media Query for Small Screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .cityInput {
+        font-size: 1.25rem; /* Smaller font size */
+    }
+
+    button[type="submit"] {
+        font-size: 1.25rem; /* Adjusted button font size */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .cityDisplay,
+    .tempDisplay {
+        font-size: 2rem; /* Smaller text for city and temperature */
+    }
+
+    .weatherEmoji {
+        font-size: 4rem; /* Adjusted emoji size */
+    }
+
+    .card {
+        padding: 20px; /* Less padding for smaller screens */
+    }
+}
