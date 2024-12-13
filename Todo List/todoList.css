@@ -1,34 +1,35 @@
-*{
+/* Global styles */
+* {
     margin: 0;
     padding: 0;
-    font-family:'poppins',sans-serif ;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
 }
 
-.todo-list{
-    width: 200%;
-    max-width: 540px;
+.todo-list {
+    width: 100%;  /* 100% for small screens, ensure it takes full width */
+    max-width: 540px; /* Max width for larger screens */
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
 
-.todo-list h2{
+.todo-list h2 {
     color: #002765;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +39,7 @@
     margin-bottom: 25px;
 }
 
-input{
+input {
     flex: 1;
     border: none;
     outline: none;
@@ -46,7 +47,7 @@ input{
     padding: 10px;
 }
 
-button{
+button {
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -57,7 +58,7 @@ button{
     border-radius: 40px;
 }
 
-ul li{
+ul li {
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -66,26 +67,25 @@ ul li{
     position: relative;
 }
 
-ul li::before{
+ul li::before {
     content: '⭕';
     font-size: 20px;
-    position: absolute; /* Position it absolutely inside the li */
-    left: 10px; /* Move it to the left */
+    position: absolute;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
-
 }
 
-ul li.check{
+ul li.check {
     color: #555;
     text-decoration: line-through;
 }
 
-ul li.check::before{
+ul li.check::before {
     content: '✅';
 }
 
-ul li  span{
+ul li span {
     position: absolute;
     right: 0;
     top: 5px;
@@ -98,6 +98,54 @@ ul li  span{
     border-radius: 50%;
 }
 
-ul li span:hover{
+ul li span:hover {
     background: #edeef0;
+}
+
+/* Responsive design for 370px width or smaller screens */
+@media (max-width: 370px) {
+    .todo-list {
+        width: 95%; /* Adjust width to take 95% of the screen */
+        padding: 20px; /* Reduced padding for compact design */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    .row {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Ensure elements take full width */
+        gap: 10px; /* Space between input and button */
+        padding: 10px 0; /* Adjust padding */
+    }
+
+    input {
+        width: 100%; /* Ensure input takes full width */
+        padding: 8px; /* Reduce padding */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    button {
+        width: 100%; /* Ensure button takes full width */
+        font-size: 0.9rem; /* Reduce font size */
+        padding: 12px; /* Adjust padding for smaller devices */
+    }
+
+    ul li {
+        font-size: 1rem; /* Adjust font size for task items */
+        padding: 10px 5px; /* Reduce padding */
+    }
+
+    ul li::before {
+        font-size: 18px; /* Reduce icon size */
+        left: 8px; /* Adjust position */
+    }
+
+    ul li span {
+        width: 30px; /* Reduce delete button size */
+        height: 30px;
+        font-size: 18px; /* Reduce font size */
+        line-height: 30px;
+    }
 }
