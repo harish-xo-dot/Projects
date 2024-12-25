@@ -59,7 +59,7 @@
 
 /* Base */
 
-*{
+html,body{
     overflow-x:hidden;
 }
 *,::before, ::before{
@@ -153,9 +153,17 @@ img {
     margin-bottom: var(--mb-4);
 }
 
+.nav_list {
+    overflow: visible;
+}
+
 .nav_link{
     position: relative;
     color: #fff;
+}
+
+.nav_list {
+    overflow: visible !important; /* Override global overflow-x: hidden */
 }
 
 .nav_list a{
@@ -172,7 +180,7 @@ img {
     height: 0.18rem;
     left: 0;
     top: 2rem;
-    background-color: var(--first-color);
+    background-color: var(--third-color);
 }
 
 .nav_logo{
@@ -195,7 +203,7 @@ img {
     height: 0.18rem;
     left: 0;
     top: 2rem;
-    background-color: var(--first-color);
+    background-color: var(--third-color);
 }
 
 .show{
@@ -243,7 +251,6 @@ img {
     right: 0;
     bottom: 0;
     width: 300px;
-
 }
 
 .home_img svg{
@@ -304,7 +311,8 @@ img {
 }
 
 .about_img svg{
-    height: 350px;
+    height: 300px;
+    width: 300px;
     border-radius: 0.5rem;
 }
 
@@ -428,7 +436,7 @@ img {
 
 .footer{
     background-color: var(--second-color);
-    color:aliceblue;
+    color:var(--third-color);
     text-align: center;
     font-weight: var(--font-semi);
     padding: 2rem 0;
@@ -445,11 +453,11 @@ img {
 
 .footer-icon{
     font-size: 1.5rem;
-    color: aliceblue;
+    color: var(--third-color);
     margin: 0 var(--mb-2);
 }
 
-@media screen and (min-width : 768px){
+@media screen and (min-width : 769px){
  
        body{
            margin: 0;
